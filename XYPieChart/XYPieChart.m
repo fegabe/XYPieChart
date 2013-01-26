@@ -310,6 +310,11 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
             }
             
             [_pieView setUserInteractionEnabled:YES];
+            
+            if ([_delegate respondsToSelector:@selector(reloadDataEnded)])
+            {
+                [_delegate reloadDataEnded];
+            }
         }];
         
         BOOL isOnStart = ([slicelayers count] == 0 && sliceCount);
