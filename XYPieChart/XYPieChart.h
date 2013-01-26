@@ -69,4 +69,7 @@
 - (void)setSliceSelectedAtIndex:(NSInteger)index;
 - (void)setSliceDeselectedAtIndex:(NSInteger)index;
 
+- (void)pauseAnimation;
+- (void)resumeAnimation;
+
 @end;
